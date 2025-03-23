@@ -44,7 +44,6 @@ export default defineConfig([
         { fixStyle: 'separate-type-imports' },
       ],
       '@typescript-eslint/consistent-type-exports': 2,
-      "jsdoc/require-jsdoc": 1,
       'jsdoc/valid-types': 2,
       'jsdoc/require-returns': 3,
       'jsdoc/require-param-type': 3,
