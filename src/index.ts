@@ -1,1 +1,1 @@
-const textTs = (a) => a;
+export { add } from './utils';
