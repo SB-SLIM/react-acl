@@ -1,4 +1,4 @@
 {
-  "**/*.{ts,tsx}": ["tsc --noEmit", "prettier --write"],
+  "**/*.{ts,tsx}": ["eslint", "tsc --noEmit", "prettier --write"],
   "docs/**/*.md": ["prettier --write"]
 }
