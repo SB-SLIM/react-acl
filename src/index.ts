@@ -1,0 +1,1 @@
+const textTs = (a) => a;
