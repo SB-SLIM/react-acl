@@ -27,7 +27,7 @@ export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     plugins: { js, jsdoc },
-    extends: ['js/recommended'],
+    extends: ['js/recommended', "plugin:react/recommended"],
     rules: {
       '@typescript-eslint/ban-ts-comment': [0],
       '@typescript-eslint/no-redeclare': [2],

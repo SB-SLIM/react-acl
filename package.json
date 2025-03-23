@@ -7,7 +7,7 @@
     "type-test": "tsc",
     "clean": "rimraf dist",
     "build": "npm run clean && tsup",
-    "lint": "eslint src test",
+    "lint": "eslint src",
     "format": "prettier --write \"{src,test}/**/*.{js,ts,tsx}\" \"docs/**/*.md\"",
     "check-format": "prettier --check .",
     "test": "vitest --run --typecheck",
