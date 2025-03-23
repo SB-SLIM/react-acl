@@ -5,11 +5,6 @@ import { defineConfig } from 'eslint/config';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
-import path from 'path';
-
-// Utilisation de import.meta.url pour obtenir le chemin du fichier
-const __dirname = path.dirname(new URL(import.meta.url).pathname);
-
 export default defineConfig([
   jsdoc.configs['flat/recommended'],
   { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
@@ -19,15 +14,22 @@ export default defineConfig([
       globals: globals.browser,
       parserOptions: {
         project: './tsconfig.json',
-        tsconfigRootDir: __dirname,
         createDefaultProgram: true,
+        ecmaFeatures: {
+          jsx: true,
+        },
       },
     },
   },
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     plugins: { js, jsdoc },
-    extends: ['js/recommended', "plugin:react/recommended"],
+    extends: ['js/recommended'],
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
     rules: {
       '@typescript-eslint/ban-ts-comment': [0],
       '@typescript-eslint/no-redeclare': [2],
