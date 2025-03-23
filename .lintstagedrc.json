@@ -1,4 +1,0 @@
-{
-  "**/*.{ts,tsx}": ["eslint", "bash -c \"tsc $* --noEmit\"", "prettier --write"],
-  "docs/**/*.md": ["prettier --write"]
-}
