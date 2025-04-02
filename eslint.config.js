@@ -6,8 +6,6 @@ import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
 export default defineConfig([
-  jsdoc.configs['flat/recommended'],
-  { files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'] },
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     languageOptions: {
@@ -20,10 +18,7 @@ export default defineConfig([
         },
       },
     },
-  },
-  {
-    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
-    plugins: { js, jsdoc },
+    plugins: { js, jsdoc, pluginReact },
     extends: ['js/recommended'],
     settings: {
       react: {
@@ -52,6 +47,13 @@ export default defineConfig([
       'react/no-is-mounted': [0],
     },
   },
+
+  // JSdoc recommended config
+  jsdoc.configs['flat/recommended'],
+
+  // TypeScript recommended config
   tseslint.configs.recommended,
+
+  // React recommended config
   pluginReact.configs.flat.recommended,
 ]);
