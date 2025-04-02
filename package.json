@@ -1,5 +1,5 @@
 {
-  "name": "@sb/react-acl",
+  "name": "@sb-codex/react-acl",
   "version": "1.0.1",
   "description": "react ACL",
   "main": "dist/index.js",
@@ -12,10 +12,10 @@
     "check-format": "prettier --check .",
     "test": "vitest --run --typecheck",
     "dev": "vitest",
-    "ci": "npm run build && npm run check-format && npm run type-test && npm run test",
+    "ci": "npm run build && npm run check-format && npm run test:type && npm run test",
     "local-release": "changeset version && changeset publish",
     "prepublishOnly": "npm run ci",
-    "type-test": "tsc --noEmit",
+    "test:type": "tsc --noEmit",
     "test:watch": "vitest --watch",
     "prepare": "husky",
     "test:browser": "vitest"
@@ -77,5 +77,9 @@
       "import": "./dist/index.js",
       "default": "./dist/index.cjs"
     }
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "types": "./dist/index.d.ts"
 }
