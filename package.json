@@ -1,6 +1,6 @@
 {
   "name": "@sb-codex/react-acl",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react ACL",
   "main": "dist/index.js",
   "scripts": {
